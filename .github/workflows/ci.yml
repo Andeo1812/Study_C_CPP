@@ -4,20 +4,20 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - run: ./run_linters.sh
+      - run: -./run_linters.sh
   build:
     runs-on: ubuntu-latest
     needs: [check]
     steps:
-      - run: ./run_linters.sh
+      - run: -./run_linters.sh
       - run: $(CC) -Wall -Wextra -Werror $(addprefix -I,$(HDRS)) -o $(TARGET) $(CFLAGS) $(SRCS)
   test:
     runs-on: ubuntu-latest
     needs: [build]
     steps:
-      - run: ./btests/run.sh $(TARGET)
+      - run: -./btests/run.sh $(TARGET)
   memtest:
     runs-on: ubuntu-latest
     needs: [ test ]
     steps:
-      - run: ./btests/run.sh $(TARGET) --memcheck
+      - run: -./btests/run.sh $(TARGET) --memcheck
