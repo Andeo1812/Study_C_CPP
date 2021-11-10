@@ -9,9 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: [check]
     steps:
-      - run: make build
-        with:
-          path: main.out
+      script:
+        - make
+        artifacts:
+          paths:
+            - ${BIN_NAME}
   test:
     runs-on: ubuntu-latest
     needs: [build]
