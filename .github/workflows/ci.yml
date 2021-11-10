@@ -1,15 +1,22 @@
 on: push
 
 jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - shell: /run_linters.sh
   build:
     runs-on: ubuntu-latest
+    needs: [check]
     steps:
       - uses: actions/checkout@v2
       - shell: make build
 
   test:
     runs-on: ubuntu-latest
+    container: leshiy1295/gcc_linters
     needs: [build]
     steps:
       - uses: actions/checkout@v2
-      - shell: make test
+      - run: make test
