@@ -47,7 +47,7 @@ std::ostream& operator<<(std::ostream& os, const Matrix& matrix);
 //  Step view
 bool check_null_row(const Matrix& source, const size_t row);
 bool check_null_col(const Matrix& source, const size_t col);
-void plus_col(Matrix* source, const size_t target, const size_t col);
+void plus_col(Matrix& source, const size_t target, const size_t col);
 bool check_null_diag_el(Matrix& source, const size_t pos);
 bool step_view(Matrix& source);
 
