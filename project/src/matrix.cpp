@@ -1,7 +1,4 @@
-#include <iostream>
-#include <cmath>
 #include <iomanip>
-#include <istream>
 #include <limits>
 
 

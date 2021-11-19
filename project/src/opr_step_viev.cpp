@@ -47,7 +47,7 @@ bool check_null_diag_el(Matrix& source, const size_t pos) {
     return false;
 }
 
-bool step_viev(Matrix& source) {
+bool step_view(Matrix& source) {
     for (size_t k = 0; k < source.getRows(); k++) {
         if (check_null_row(source, k) || check_null_col(source, k)) {
             return false;
