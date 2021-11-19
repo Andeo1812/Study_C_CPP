@@ -11,7 +11,7 @@ double Matrix::det() const {
 
     Matrix matrix = Matrix(*this);
 
-    if (!step_viev(matrix)) {
+    if (!step_view(matrix)) {
         return 0;
     }
 
