@@ -103,4 +103,3 @@ Matrix Matrix::inv() const {
 }
 
 }  // namespace prep
-

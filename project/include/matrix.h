@@ -30,6 +30,12 @@ class Matrix {
   friend Matrix operator*(double val, const Matrix& matrix);
   friend std::ostream& operator<<(std::ostream& os, const Matrix& matrix);
 
+  bool check_null_row(const Matrix& source, const size_t row) const;
+  bool check_null_col(const Matrix& source, const size_t col) const;
+  void plus_col(Matrix& source, const size_t target, const size_t col) const;
+  bool check_null_diag_el(Matrix& source, size_t pos) const;
+  bool step_view(Matrix& source) const;
+
   Matrix transp() const;
   double det() const;
   Matrix adj() const;
@@ -43,7 +49,5 @@ class Matrix {
 
 Matrix operator*(double val, const Matrix& matrix);
 std::ostream& operator<<(std::ostream& os, const Matrix& matrix);
-
-bool step_view(Matrix& source);
 
 }  // namespace prep

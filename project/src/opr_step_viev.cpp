@@ -2,7 +2,7 @@
 #include "exceptions.h"
 
 namespace prep {
-bool check_null_row(const Matrix& source, const size_t row) {
+bool Matrix::check_null_row(const Matrix& source, const size_t row) {
     size_t pos = 0;
 
     while (source(row, pos) == 0) {
@@ -14,7 +14,7 @@ bool check_null_row(const Matrix& source, const size_t row) {
     return false;
 }
 
-bool check_null_col(const Matrix& source, const size_t col) {
+bool Matrix::check_null_col(const Matrix& source, const size_t col) {
     size_t pos = 0;
 
     while (source(pos, col) == 0) {
@@ -26,14 +26,14 @@ bool check_null_col(const Matrix& source, const size_t col) {
     return false;
 }
 
-void plus_col(Matrix& source, const size_t target, const size_t col) {
+void Matrix::plus_col(Matrix& source, const size_t target, const size_t col) {
     for (size_t i = 0; i < source.getRows(); i++) {
         source(i, target) += source(i, col);
     }
 }
 
 
-bool check_null_diag_el(Matrix& source, const size_t pos) {
+bool Matrix::check_null_diag_el(Matrix& source, size_t pos) {
     if (source(pos, pos) == 0) {
         size_t not_zero_col = 1;
 
@@ -47,7 +47,7 @@ bool check_null_diag_el(Matrix& source, const size_t pos) {
     return false;
 }
 
-bool step_view(Matrix& source) {
+bool Matrix::step_view(Matrix& source) {
     for (size_t k = 0; k < source.getRows(); k++) {
         if (check_null_row(source, k) || check_null_col(source, k)) {
             return false;
