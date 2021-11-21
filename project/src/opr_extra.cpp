@@ -34,9 +34,9 @@ Matrix Matrix::create_minor(const size_t row, const size_t col) const {
         }
 
         size_t minor_col = 0;
-        for (size_t j = 0; j < this->getCols(); j++) {
+        for (size_t j = 0; j < getCols(); j++) {
             if (j != col) {
-                minor(minor_row, minor_col) = (*this)(i, j);
+                minor(minor_row, minor_col) = m_data[i][j];
                 minor_col++;
             }
         }
@@ -52,7 +52,7 @@ Matrix Matrix::adj() const {
 
     if (getRows() == 1 && getCols() == 1) {
         Matrix matrix_out(getRows(), getCols());
-        matrix_out(0, 0) = (*this)(0, 0);
+        matrix_out(0, 0) = m_data[0][0];
         return matrix_out;
     }
 
@@ -78,20 +78,19 @@ Matrix Matrix::inv() const {
 
     if (m_rows == 1) {
         Matrix matrix_out(1, 1);
-        if (!(*this)(0, 0)) {
+
+        if (!m_data[0][0]) {
             throw SingularMatrix();
         }
 
-        matrix_out(0, 0) = 1 / (*this)(0, 0);
+        matrix_out(0, 0) = 1 / m_data[0][0];
 
         return matrix_out;
     }
 
     auto value = det();
 
-    auto eps = 1e-7;
-
-    if (std::fabs(value) <= eps) {
+    if (std::fabs(value) <= EPS) {
         throw SingularMatrix();
     }
 

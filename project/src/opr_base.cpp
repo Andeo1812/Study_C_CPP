@@ -33,11 +33,9 @@ bool Matrix::operator==(const Matrix& rhs) const {
         return false;
     }
 
-    auto eps = 1e-07;
-
     for (size_t i = 0; i < getRows(); i++) {
         for (size_t j = 0; j < getCols(); j++) {
-            if (std::fabs(rhs(i, j) - (*this)(i, j)) > eps) {
+            if (std::fabs(rhs(i, j) - m_data[i][j]) > EPS) {
                 return false;
             }
         }

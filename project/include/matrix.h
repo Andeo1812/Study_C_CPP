@@ -3,6 +3,8 @@
 #include <vector>
 #include <istream>
 
+#define EPS 1e-7
+
 namespace prep {
 class Matrix {
  public:

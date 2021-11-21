@@ -11,7 +11,7 @@ Matrix Matrix::operator*(double val) const {
 
     for (size_t i = 0; i < matrix_out.getRows(); i++) {
         for (size_t j = 0; j < matrix_out.getCols(); j++) {
-            matrix_out(i, j) = val * (*this)(i, j);
+            matrix_out(i, j) = val * m_data[i][j];
         }
     }
 
@@ -35,7 +35,7 @@ Matrix Matrix::operator+(const Matrix& rhs) const {
 
     for (size_t i = 0; i < matrix_out.getRows(); i++) {
         for (size_t j = 0; j < matrix_out.getCols(); j++) {
-            matrix_out(i, j) = (*this)(i, j) + rhs(i, j);
+            matrix_out(i, j) = m_data[i][j] + rhs(i, j);
         }
     }
 
@@ -55,7 +55,7 @@ Matrix Matrix::operator-(const Matrix& rhs) const {
 
     for (size_t i = 0; i < matrix_out.getRows(); i++) {
         for (size_t j = 0; j < matrix_out.getCols(); j++) {
-            matrix_out(i, j) = (*this)(i, j) - rhs(i, j);
+            matrix_out(i, j) = m_data[i][j] - rhs(i, j);
         }
     }
 
@@ -76,7 +76,7 @@ Matrix Matrix::operator*(const Matrix& rhs) const {
     for (size_t i = 0; i < matrix_out.getRows(); i++) {
         for (size_t j = 0; j < matrix_out.getCols(); j++) {
             for (size_t k = 0; k < getCols(); k++) {
-                matrix_out(i, j) += (*this)(i, k) * rhs(k, j);
+                matrix_out(i, j) += m_data[i][k] * rhs(k, j);
             }
         }
     }
@@ -89,7 +89,7 @@ Matrix Matrix::transp() const {
 
     for (size_t i = 0; i < matrix_out.getRows(); i++) {
         for (size_t j = 0; j < matrix_out.getCols(); j++) {
-            matrix_out(i, j) = (*this)(j, i);
+            matrix_out(i, j) = m_data[j][i];
         }
     }
 
