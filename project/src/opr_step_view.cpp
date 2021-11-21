@@ -60,7 +60,7 @@ bool Matrix::step_view() {
         for (size_t i = 1 + k; i < getRows(); i++) {
             check_null_diag_el(k);
 
-            double mull = m_data[i][k] / m_data[k][k];
+            auto mull = m_data[i][k] / m_data[k][k];
 
             for (size_t j = 0; j < getRows(); j++) {
                 m_data[i][j] -= mull *  m_data[k][j];
