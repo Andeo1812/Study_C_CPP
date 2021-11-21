@@ -3,11 +3,11 @@
 
 namespace prep {
 Matrix Matrix::operator*(double val) const {
-    if (!this->m_rows || !this->m_cols) {
+    if (!getRows() || !getCols()) {
         throw DimensionMismatch(*this);
     }
 
-    Matrix matrix_out(this->m_rows, this->m_cols);
+    Matrix matrix_out(getRows(), getCols());
 
     for (size_t i = 0; i < matrix_out.getRows(); i++) {
         for (size_t j = 0; j < matrix_out.getCols(); j++) {
@@ -18,20 +18,20 @@ Matrix Matrix::operator*(double val) const {
     return matrix_out;
 }
 
-    Matrix operator*(double val, const Matrix& matrix) {
-        return matrix * val;
-    }
+Matrix operator*(double val, const Matrix& matrix) {
+    return matrix * val;
+}
 
 Matrix Matrix::operator+(const Matrix& rhs) const {
-    if (!this->m_rows || !this->m_cols || !rhs.m_rows || !rhs.m_cols) {
+    if (!getRows() || !getCols() || !rhs.getRows() || !rhs.getCols()) {
         throw DimensionMismatch(rhs);
     }
 
-    if (this->m_cols != rhs.m_cols || this->m_rows != rhs.m_rows) {
+    if (getRows() != rhs.getRows() || getCols()  != rhs.getCols()) {
         throw DimensionMismatch(*this, rhs);
     }
 
-    Matrix matrix_out(this->m_rows, this->m_cols);
+    Matrix matrix_out(getRows(), getCols());
 
     for (size_t i = 0; i < matrix_out.getRows(); i++) {
         for (size_t j = 0; j < matrix_out.getCols(); j++) {
@@ -43,15 +43,15 @@ Matrix Matrix::operator+(const Matrix& rhs) const {
 }
 
 Matrix Matrix::operator-(const Matrix& rhs) const {
-    if (!this->m_rows || !this->m_cols || !rhs.m_rows || !rhs.m_cols) {
+    if (!getRows() || !getCols() || !rhs.getRows() || !rhs.getCols()) {
         throw DimensionMismatch(rhs);
     }
 
-    if (this->m_cols != rhs.m_cols || this->m_rows != rhs.m_rows) {
+    if (getRows() != rhs.getRows() || getCols()  != rhs.getCols()) {
         throw DimensionMismatch(*this, rhs);
     }
 
-    Matrix matrix_out(this->m_rows, this->m_cols);
+    Matrix matrix_out(getRows(), getCols());
 
     for (size_t i = 0; i < matrix_out.getRows(); i++) {
         for (size_t j = 0; j < matrix_out.getCols(); j++) {
@@ -63,19 +63,19 @@ Matrix Matrix::operator-(const Matrix& rhs) const {
 }
 
 Matrix Matrix::operator*(const Matrix& rhs) const {
-    if (!this->m_rows || !this->m_cols || !rhs.m_rows || !rhs.m_cols) {
+    if (!getRows() || !getCols() || !rhs.getRows() || !rhs.getCols()) {
         throw DimensionMismatch(rhs);
     }
 
-    if (this->m_cols != rhs.m_rows) {
+    if (getCols() != rhs.getRows()) {
         throw DimensionMismatch(rhs);
     }
 
-    Matrix matrix_out(this->m_rows, rhs.m_cols);
+    Matrix matrix_out(getRows(), rhs.getCols());
 
     for (size_t i = 0; i < matrix_out.getRows(); i++) {
         for (size_t j = 0; j < matrix_out.getCols(); j++) {
-            for (size_t k = 0; k < this->m_cols; k++) {
+            for (size_t k = 0; k < getCols(); k++) {
                 matrix_out(i, j) += (*this)(i, k) * rhs(k, j);
             }
         }
@@ -85,7 +85,7 @@ Matrix Matrix::operator*(const Matrix& rhs) const {
 }
 
 Matrix Matrix::transp() const {
-    Matrix matrix_out(this->m_cols, this->m_rows);
+    Matrix matrix_out(getCols(), getRows());
 
     for (size_t i = 0; i < matrix_out.getRows(); i++) {
         for (size_t j = 0; j < matrix_out.getCols(); j++) {

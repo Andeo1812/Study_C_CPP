@@ -30,18 +30,19 @@ class Matrix {
   friend Matrix operator*(double val, const Matrix& matrix);
   friend std::ostream& operator<<(std::ostream& os, const Matrix& matrix);
 
-  bool check_null_row(const Matrix& source, const size_t row) const;
-  bool check_null_col(const Matrix& source, const size_t col) const;
-  void plus_col(Matrix& source, const size_t target, const size_t col) const;
-  bool check_null_diag_el(Matrix& source, size_t pos) const;
-  bool step_view(Matrix& source) const;
-
   Matrix transp() const;
   double det() const;
   Matrix adj() const;
   Matrix inv() const;
 
  private:
+  Matrix create_minor(const size_t row, const size_t col) const;
+  bool check_null_row(const size_t row) const;
+  bool check_null_col(const size_t col) const;
+  void plus_col(const size_t target, const size_t col);
+  bool check_null_diag_el(const size_t pos);
+  bool step_view();
+
   size_t m_rows{};
   size_t m_cols{};
   std::vector<std::vector<double>> m_data{};

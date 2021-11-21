@@ -5,13 +5,13 @@
 
 namespace prep {
 double Matrix::det() const {
-    if (m_rows != m_cols) {
+    if (getRows() != getCols()) {
         throw DimensionMismatch(*this);
     }
 
     Matrix matrix = Matrix(*this);
 
-    if (!step_view(matrix)) {
+    if (!matrix.step_view()) {
         return 0;
     }
 
@@ -24,19 +24,19 @@ double Matrix::det() const {
     return value;
 }
 
-Matrix create_minor(const Matrix& matrix, const size_t row, const size_t col) {
-    Matrix minor(matrix.getRows() - 1, matrix.getCols() - 1);
+Matrix Matrix::create_minor(const size_t row, const size_t col) const {
+    Matrix minor(getRows() - 1, getCols() - 1);
 
     size_t minor_row = 0;
-    for (size_t i = 0; i < matrix.getRows(); i++) {
+    for (size_t i = 0; i < getRows(); i++) {
         if (i == row) {
             continue;
         }
 
         size_t minor_col = 0;
-        for (size_t j = 0; j < matrix.getCols(); j++) {
+        for (size_t j = 0; j < this->getCols(); j++) {
             if (j != col) {
-                minor(minor_row, minor_col) = matrix(i, j);
+                minor(minor_row, minor_col) = (*this)(i, j);
                 minor_col++;
             }
         }
@@ -46,21 +46,21 @@ Matrix create_minor(const Matrix& matrix, const size_t row, const size_t col) {
 }
 
 Matrix Matrix::adj() const {
-    if (m_rows != m_cols || !m_rows) {
+    if (getRows() != getCols() || !getRows()) {
         throw DimensionMismatch(*this);
     }
 
-    if (this->m_rows == 1 && this->m_cols == 1) {
-        Matrix matrix_out(this->m_rows, this->m_cols);
+    if (getRows() == 1 && getCols() == 1) {
+        Matrix matrix_out(getRows(), getCols());
         matrix_out(0, 0) = (*this)(0, 0);
         return matrix_out;
     }
 
-    Matrix matrix(this->m_rows, this->m_cols);
+    Matrix matrix(getRows(), getCols());
 
     for (size_t i = 0; i < matrix.getRows(); i++) {
         for (size_t j = 0; j < matrix.getCols(); j++) {
-            Matrix minor = create_minor(*this, i, j);
+            Matrix minor = create_minor(i, j);
             auto value = minor.det();
             matrix(i, j) = pow(-1, (i+j)) * value;
         }
@@ -72,7 +72,7 @@ Matrix Matrix::adj() const {
 }
 
 Matrix Matrix::inv() const {
-    if (m_rows != m_cols || !m_rows) {
+    if (getRows() != getCols() || !getRows()) {
         throw DimensionMismatch(*this);
     }
 
