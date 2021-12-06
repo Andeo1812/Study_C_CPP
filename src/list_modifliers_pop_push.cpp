@@ -22,11 +22,11 @@ namespace task {
     }
 
     template<class T>
-    void list<T>:resize(size_t count) {
+    void list<T>::resize(size_t count) {
 
     }
     template<class T>
-    void list<T>:swap(list& other) {
+    void list<T>::swap(list& other) {
 
     }
 

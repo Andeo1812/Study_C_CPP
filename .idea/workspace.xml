@@ -20,6 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e446366f-beac-4501-a4d7-68906d77d20c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/list_modiflers.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list_modifliers_pop_push.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/list.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/list.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/list_access.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_access.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/list_capacity.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_capacity.cpp" afterDir="false" />
@@ -142,7 +145,7 @@
       <workItem from="1638048787607" duration="677000" />
       <workItem from="1638380351613" duration="4113000" />
       <workItem from="1638751541523" duration="2736000" />
-      <workItem from="1638786864898" duration="12664000" />
+      <workItem from="1638786864898" duration="13121000" />
     </task>
     <servers />
   </component>
