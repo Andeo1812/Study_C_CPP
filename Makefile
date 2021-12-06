@@ -5,7 +5,8 @@ HDRS = \
 		include/list.hpp
 
 SRCS = \
-           src/iterator_impl.cpp
+           src/iterator_impl.cpp \
+           src/list*.cpp
 
 TST_SRCS = \
            test/test.cpp
