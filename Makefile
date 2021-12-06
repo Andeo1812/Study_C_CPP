@@ -2,7 +2,10 @@ TST_TARGET = ./tests.out
 VALGRIND_LOG = "valgrind.log"
 
 HDRS = \
-		src/list.hpp
+		include/list.hpp
+
+SRCS = \
+           src/iterator_impl.cpp
 
 TST_SRCS = \
            test/test.cpp
@@ -27,7 +30,7 @@ memtest: $(TST_TARGET)
 rebuild: clean build
 
 $(TST_TARGET): $(TST_SRCS) $(HDRS)
-	$(CXX) -std=c++17 -g -fdiagnostics-color -O0 -Wall -Wextra -Werror -I. -o $(TST_TARGET) $(TST_SRCS)
+	$(CXX) -std=c++17 -g -fdiagnostics-color -O0 -Wall -Wextra -Werror -I. -o $(TST_TARGET) $(TST_SRCS) $(SRCS)
 
 clean:
 	rm -f $(TST_TARGET) ${VALGRIND_LOG}

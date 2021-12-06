@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-#include "src/list.hpp"
+#include "include/list.hpp"
 
 static constexpr int kRandomSeed = 1234567890;
 

@@ -7,7 +7,6 @@ namespace task {
 
 template<class T>
 class list {
-
 public:
     class iterator {
     public:
@@ -30,12 +29,11 @@ public:
 
         bool operator==(iterator other) const;
         bool operator!=(iterator other) const;
-
-        // Your code goes here?..
-
     private:
-        // Your code hoes here...
+        struct element *it;
     };
+
+    friend iterator;
 
     class const_iterator {
         // Your code goes here...
@@ -101,15 +99,16 @@ public:
     void reverse();
     void unique();
     void sort();
-
-    // Your code goes here?..
-
 private:
+    size_t size_l;
 
-    // Your code goes here...
+    iterator first;
+    iterator last;
 
+    struct element {
+        T value;
+        iterator prev, next;
+    };
 };
-
-// Your template function definitions may go here...
 
 }  // namespace task
