@@ -3,8 +3,6 @@
 
 
 namespace task {
-
-
 template<class T>
 class list {
 public:
@@ -32,8 +30,6 @@ public:
     private:
         struct element *it;
     };
-
-    friend iterator;
 
     class const_iterator {
         // Your code goes here...
@@ -75,6 +71,7 @@ public:
     size_t size() const;
     size_t max_size() const;
 
+    void clear();
 
     iterator insert(const_iterator pos, const T& value);
     iterator insert(const_iterator pos, size_t count, const T& value);
@@ -92,7 +89,6 @@ public:
     void resize(size_t count);
     void swap(list& other);
 
-    void clear();
     void merge(list& other);
     void splice(const_iterator pos, list& other);
     void remove(const T& value);

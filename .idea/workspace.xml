@@ -19,7 +19,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e446366f-beac-4501-a4d7-68906d77d20c" name="Changes" comment="" />
+    <list default="true" id="e446366f-beac-4501-a4d7-68906d77d20c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/list_iterators.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list_operations.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/include/list.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/list.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iterator_impl.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/iterator_impl.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list_modiflers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_modiflers.cpp" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,11 +56,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/btests/testcases" />
       <recent name="$PROJECT_DIR$/btests/emails" />
@@ -138,7 +146,7 @@
       <workItem from="1638048787607" duration="677000" />
       <workItem from="1638380351613" duration="4113000" />
       <workItem from="1638751541523" duration="2736000" />
-      <workItem from="1638786864898" duration="13452000" />
+      <workItem from="1638786864898" duration="17564000" />
     </task>
     <servers />
   </component>
