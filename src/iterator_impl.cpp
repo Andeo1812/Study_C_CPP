@@ -2,61 +2,58 @@
 
 namespace task {
     template<class T>
-    list<T>::iterator::iterator() {
-        node *tmp = nullptr;
+    list<T>::iterator::iterator() = default;
+
+    template<class T>
+    list<T>::iterator::iterator(const iterator& other) {
+        this->cur = other.cur;
+    }
+
+    template<class T>
+    typename list<T>::iterator& list<T>::iterator::operator=(const iterator& other) {
+        this->cur = other.cur;
         return *this;
     }
 
     template<class T>
-    list<T>::iterator::iterator(const iterator&) {
-        iterator tmp;
+    typename list<T>::iterator& list<T>::iterator::operator++() {  //  справа
+        this->cur = cur->next;
         return *this;
     }
 
     template<class T>
-    typename list<T>::iterator& list<T>::iterator::operator=(const iterator&) {
-
-    }
-
-    template<class T>
-    typename list<T>::iterator& list<T>::iterator::operator++() {
-        cur = cur->next;
-        return *this;
-    }
-
-    template<class T>
-    typename list<T>::iterator list<T>::iterator::operator++(int) {
+    typename list<T>::iterator list<T>::iterator::operator++(int) {  //  слева
         iterator tmp = cur;
-        ++cur;
+        this->cur++;
         return tmp;
     }
 
     template<class T>
-    typename list<T>::iterator::reference list<T>::iterator::operator*() const {
+    typename list<T>::iterator::reference list<T>::iterator::operator*() {
         return cur->value;
     }
 
     template<class T>
-    typename list<T>::iterator::pointer list<T>::iterator::operator->() const {
+    typename list<T>::iterator::pointer list<T>::iterator::operator->() {
         return &cur->value;
     }
 
     template<class T>
     typename list<T>::iterator& list<T>::iterator::operator--() {
-        cur = cur->prev;
+        this->cur = cur->prev;
         return *this;
     }
 
     template<class T>
     typename list<T>::iterator list<T>::iterator::operator--(int) {
         iterator tmp = cur;
-        --cur;
+        this->cur--;
         return tmp;
     }
 
     template<class T>
     bool list<T>::iterator::operator==(iterator other) const {
-        return (*this == other);
+        return *this == other;
     }
 
     template<class T>

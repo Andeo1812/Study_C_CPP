@@ -19,8 +19,8 @@ public:
         using iterator_category = std::bidirectional_iterator_tag;
 
         iterator();
-        iterator(const iterator&);
-        iterator& operator=(const iterator&);
+        iterator(const iterator& other);
+        iterator& operator=(const iterator& other);
 
         iterator& operator++();
         iterator operator++(int);
