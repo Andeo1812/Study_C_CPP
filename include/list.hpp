@@ -32,6 +32,8 @@ public:
             T value;
             struct element *prev, *next;
         };
+
+        struct element *cur;
     };
 
     class const_iterator {
