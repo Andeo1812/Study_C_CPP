@@ -5,6 +5,10 @@
 namespace task {
 template<class T>
 class list {
+    struct node {
+        T value;
+        struct node *prev, *next;
+    };
 public:
     class iterator {
     public:
@@ -20,21 +24,18 @@ public:
 
         iterator& operator++();
         iterator operator++(int);
-        reference operator*() const;
-        pointer operator->() const;
+        reference operator*();
+        pointer operator->();
         iterator& operator--();
         iterator operator--(int);
 
         bool operator==(iterator other) const;
         bool operator!=(iterator other) const;
     private:
-        struct element {
-            T value;
-            struct element *prev, *next;
-        };
-
-        struct element *cur;
+        node *cur;
     };
+
+    friend class iterator;
 
     class const_iterator {
         // Your code goes here...
