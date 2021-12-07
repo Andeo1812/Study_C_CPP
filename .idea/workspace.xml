@@ -20,12 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e446366f-beac-4501-a4d7-68906d77d20c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/list_iterators.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list_operations.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/list.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/list.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/iterator_impl.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/iterator_impl.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_modiflers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_modiflers.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,9 +98,9 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -146,7 +143,8 @@
       <workItem from="1638048787607" duration="677000" />
       <workItem from="1638380351613" duration="4113000" />
       <workItem from="1638751541523" duration="2736000" />
-      <workItem from="1638786864898" duration="17564000" />
+      <workItem from="1638786864898" duration="17735000" />
+      <workItem from="1638827386825" duration="6967000" />
     </task>
     <servers />
   </component>
