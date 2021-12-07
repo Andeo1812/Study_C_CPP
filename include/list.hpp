@@ -28,7 +28,10 @@ public:
         bool operator==(iterator other) const;
         bool operator!=(iterator other) const;
     private:
-        struct element *it;
+        struct element {
+            T value;
+            struct element *prev, *next;
+        };
     };
 
     class const_iterator {
@@ -100,11 +103,6 @@ private:
 
     iterator first;
     iterator last;
-
-    struct element {
-        T value;
-        iterator prev, next;
-    };
 };
 
 }  // namespace task
