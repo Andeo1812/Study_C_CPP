@@ -1,3 +1,5 @@
+#pragma once // NOLINT
+
 #include <include/list.hpp>
 
 namespace task {
@@ -7,7 +9,7 @@ namespace task {
     }
 
     template<class T>
-    void list<T>::splice(const_iterator pos, list& other) {
+    void list<T>::splice(list<T>::const_iterator pos, list& other) {
 
     }
 

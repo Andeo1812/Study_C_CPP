@@ -20,9 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e446366f-beac-4501-a4d7-68906d77d20c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/const_iterator_impl.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list_base.hpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/list_modiflers_pop_push.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/list.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/list.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iterator_impl.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/iterator_impl.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iterator_impl.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/iterator_impl.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list_access.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_access.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list_capacity.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_capacity.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list_iterators.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_iterators.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list_modiflers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_modiflers.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list_modifliers_pop_push.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list_operations.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_operations.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +51,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="20b0XNEWn95t1w30CxtG52t5U2P" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -53,11 +72,12 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/include" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/btests/testcases" />
@@ -147,7 +167,13 @@
       <workItem from="1638827386825" duration="10540000" />
       <workItem from="1638873218099" duration="1298000" />
       <workItem from="1638906762099" duration="6885000" />
-      <workItem from="1638905368250" duration="5682000" />
+      <workItem from="1638905368250" duration="5746000" />
+      <workItem from="1638966439749" duration="9427000" />
+      <workItem from="1638984294353" duration="4041000" />
+      <workItem from="1638988346226" duration="1472000" />
+      <workItem from="1638989828678" duration="10225000" />
+      <workItem from="1639062903867" duration="20589000" />
+      <workItem from="1639140615415" duration="1008000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,5 @@
 #pragma once // NOLINT
+
 #include <iterator>
 
 
@@ -12,6 +13,8 @@ class list {
 public:
     class iterator {
     public:
+        node *cur;
+
         using difference_type = ptrdiff_t;
         using value_type = T;
         using pointer = T*;
@@ -19,26 +22,54 @@ public:
         using iterator_category = std::bidirectional_iterator_tag;
 
         iterator();
-        iterator(const iterator& other);
-        iterator& operator=(const iterator& other);
+        iterator(const iterator& it);
+        iterator& operator=(const iterator& it);
+
+        iterator(node* it);
+
+        node* getPtr();
 
         iterator& operator++();
         iterator operator++(int);
-        reference operator*();
-        pointer operator->();
+        reference operator*() const;
+        pointer operator->() const;
         iterator& operator--();
         iterator operator--(int);
 
         bool operator==(iterator other) const;
         bool operator!=(iterator other) const;
-    private:
-        node *cur;
     };
 
-    friend class iterator;
 
     class const_iterator {
-        // Your code goes here...
+    public:
+        node *cur;
+
+        using difference_type = ptrdiff_t;
+        using value_type = T;
+        using pointer = const T*;
+        using reference = const T&;
+        using iterator_category = std::bidirectional_iterator_tag;
+
+        const_iterator();
+        const_iterator(const const_iterator& it);
+        const_iterator& operator=(const const_iterator& it);
+
+        const_iterator(const iterator &it);
+
+        const_iterator& operator=(node* it);
+
+        node* getPtr();
+
+        const_iterator& operator++();
+        const_iterator operator++(int);
+        reference operator*() const;
+        pointer operator->() const;
+        const_iterator& operator--();
+        const_iterator operator--(int);
+
+        bool operator==(const_iterator other) const;
+        bool operator!=(const_iterator other) const;
     };
 
     using reverse_iterator = std::reverse_iterator<iterator>;
@@ -104,8 +135,18 @@ public:
 private:
     size_t size_l;
 
-    iterator first;
-    iterator last;
+    node *first;
+    node *last;
 };
 
 }  // namespace task
+
+#include <src/iterator_impl.hpp>
+#include <src/const_iterator_impl.hpp>
+#include <src/list_base.hpp>
+#include <src/list_access.hpp>
+#include <src/list_capacity.hpp>
+#include <src/list_iterators.hpp>
+#include <src/list_modiflers.hpp>
+#include <src/list_modiflers_pop_push.hpp>
+//#include <src/list_operations.hpp>*/
