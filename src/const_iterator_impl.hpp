@@ -32,14 +32,16 @@ namespace task {
 
     template<class T>
     typename list<T>::const_iterator& list<T>::const_iterator::operator++() {  //  справа
-        this->cur = cur->next;
+        if ((this->cur != NULL) && (this->cur->next != 0))
+            cur = cur->next;
         return *this;
     }
 
     template<class T>
     typename list<T>::const_iterator list<T>::const_iterator::operator++(int) {  //  слева
         const_iterator tmp = *this;
-        this->cur++;
+        if ((this->cur != NULL) && (this->cur->next != 0))
+            cur = cur->next;
         return tmp;
     }
 
@@ -55,25 +57,27 @@ namespace task {
 
     template<class T>
     typename list<T>::const_iterator& list<T>::const_iterator::operator--() {
-        this->cur = cur->prev;
+        if ((this->cur != NULL) && (this->cur->prev != 0))
+            cur = cur->prev;
         return *this;
     }
 
     template<class T>
     typename list<T>::const_iterator list<T>::const_iterator::operator--(int) {
         const_iterator tmp = *this;
-        this->cur--;
+        if ((this->cur != NULL) && (this->cur->prev != 0))
+            cur = cur->prev;
         return tmp;
     }
 
     template<class T>
-    bool list<T>::const_iterator::operator==(const_iterator other) const {
-        return *this == other;
+    bool list<T>::const_iterator::operator==(list<T>::const_iterator other) const {
+        return (this->cur == other.cur);
     }
 
     template<class T>
-    bool list<T>::const_iterator::operator!=(const_iterator other) const {
-        return *this != other;
+    bool list<T>::const_iterator::operator!=(list<T>::const_iterator other) const {
+        return !(this->cur == other.cur);
     }
 
 }  // namespace task

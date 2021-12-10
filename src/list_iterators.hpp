@@ -5,15 +5,15 @@
 namespace task {
     template<class T>
     typename list<T>::iterator list<T>::begin() const {
-        iterator res
-        res(first->next);
+        iterator res;
+        res = first->next;
         return res;
     }
 
     template<class T>
     typename list<T>::iterator list<T>::end() const {
         iterator res;
-        res(last->prev);
+        res = last;
         return res;
     }
 

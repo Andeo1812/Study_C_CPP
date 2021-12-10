@@ -85,12 +85,11 @@ int main() {
     }
 
     {
-        std::cout <<  " THIS\n " << std::endl;
+        std::cout <<  " THIS1\n " << std::endl;
         task::list<size_t> list_task(10, 30);
         std::list<size_t> list_std(10, 30);
-        std::cout <<  " THIS\n " << std::endl;
+        std::cout << list_std.size() << " " << list_task.size()  << " \n " << std::endl;
         ASSERT_EQUAL_MSG(list_task, list_std, "Count-value constructor")
-        std::cout <<  " THIS\n " << std::endl;
 
         list_task.insert(list_task.begin(), 20);
         list_std.insert(list_std.begin(), 20);

@@ -25,7 +25,7 @@ public:
         iterator(const iterator& it);
         iterator& operator=(const iterator& it);
 
-        iterator(node* it);
+        iterator& operator=(node* it);
 
         node* getPtr();
 

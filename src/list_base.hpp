@@ -25,9 +25,12 @@ namespace task {
 
     template<class T>
     list<T>::list(size_t count, const T& value) : list() {
+        //  std::cout << size() << std::endl;
         for (size_t i = 0; i < count; i++) {
             push_back(value);
+            //  std::cout << " +\n " << std::endl;
         }
+        //  std::cout << size() << " \n " << std::endl;
     }
 
     template<class T>

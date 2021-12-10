@@ -20,19 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e446366f-beac-4501-a4d7-68906d77d20c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/const_iterator_impl.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list_base.hpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/list_modiflers_pop_push.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/include/list.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/list.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/iterator_impl.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/iterator_impl.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_access.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_access.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_capacity.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_capacity.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_iterators.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_iterators.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_modiflers.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_modiflers.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_modifliers_pop_push.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_operations.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_operations.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/const_iterator_impl.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/const_iterator_impl.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/iterator_impl.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/iterator_impl.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list_base.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_base.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list_iterators.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_iterators.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list_modiflers.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_modiflers.hpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/list_modiflers_pop_push.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_modiflers_pop_push.hpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +168,7 @@
       <workItem from="1638988346226" duration="1472000" />
       <workItem from="1638989828678" duration="10225000" />
       <workItem from="1639062903867" duration="20589000" />
-      <workItem from="1639140615415" duration="1008000" />
+      <workItem from="1639140615415" duration="4304000" />
     </task>
     <servers />
   </component>

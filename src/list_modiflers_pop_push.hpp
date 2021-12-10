@@ -20,7 +20,7 @@ namespace task {
 
         size_l++;
 
-        std::cout << last->prev->value << " PUSH_BACK\n " << std::endl;
+        //  std::cout << last->prev->value << " PUSH_BACK\n " << std::endl;
     }
 
     template<class T>

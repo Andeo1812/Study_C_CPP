@@ -17,10 +17,12 @@ namespace task {
     }
 
     template<class T>
-    list<T>::iterator::itarator(node* it) {
+    typename list<T>::iterator& list<T>::iterator::operator=(node* it) {
         cur = it;
+        cur->value = it->value;
         cur->next = it->next;
         cur->prev = it->prev;
+        return *this;
     }
 
     template<class T>
@@ -71,12 +73,12 @@ namespace task {
 
     template<class T>
     bool list<T>::iterator::operator==(list<T>::iterator other) const {
-        return *this == other;
+        return (this->cur == other.cur);
     }
 
     template<class T>
     bool list<T>::iterator::operator!=(list<T>::iterator other) const {
-        return *this != other;
+        return !(this->cur == other.cur);
     }
 
 }  // namespace task
