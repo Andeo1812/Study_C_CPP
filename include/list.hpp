@@ -25,14 +25,16 @@ public:
         iterator(const iterator& it);
         iterator& operator=(const iterator& it);
 
-        iterator& operator=(node* it);
+        iterator& operator=(node* it); //
 
-        node* getPtr();
+        node* getPtr(); //
 
         iterator& operator++();
         iterator operator++(int);
+
         reference operator*() const;
         pointer operator->() const;
+
         iterator& operator--();
         iterator operator--(int);
 
@@ -55,16 +57,18 @@ public:
         const_iterator(const const_iterator& it);
         const_iterator& operator=(const const_iterator& it);
 
-        const_iterator(const iterator &it);
+        const_iterator(const iterator &it);  //
 
-        const_iterator& operator=(node* it);
+        const_iterator& operator=(node* it);  //
 
-        node* getPtr();
+        node* getPtr();  //
 
         const_iterator& operator++();
         const_iterator operator++(int);
+
         reference operator*() const;
         pointer operator->() const;
+
         const_iterator& operator--();
         const_iterator operator--(int);
 
@@ -126,6 +130,10 @@ public:
     void resize(size_t count);
     void swap(list& other);
 
+    void swap_node(const_iterator pos, const_iterator target);
+    void move_node(iterator pos, iterator target);  //  moving a node to a position in front of the target
+    void sort_interval(iterator lft, iterator mid, iterator rht);
+
     void merge(list& other);
     void splice(const_iterator pos, list& other);
     void remove(const T& value);
@@ -149,4 +157,4 @@ private:
 #include <src/list_iterators.hpp>
 #include <src/list_modiflers.hpp>
 #include <src/list_modiflers_pop_push.hpp>
-//#include <src/list_operations.hpp>*/
+#include <src/list_operations.hpp>

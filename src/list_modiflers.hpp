@@ -19,11 +19,11 @@ namespace task {
         buf->prev->next = to_add;
         buf->prev = to_add;
 
-        size_l++;
+        this->size_l++;
 
         iterator res;
 
-        res.cur = buf;
+        res = buf;
 
         //  std::cout << " INSERT\n " << std::endl;
 
@@ -33,29 +33,58 @@ namespace task {
     template<class T>
     typename list<T>::iterator list<T>::insert(list<T>::const_iterator pos, size_t count, const T& value) {
         for (size_t i = 0; i < count; i++) {
-            std::cout << i + 1 << " iter\n " << std::endl;
+            //  std::cout << i + 1 << " iter\n " << std::endl;
             insert(pos, value);
             pos--;
         }
 
         iterator res;
 
-        res.cur = pos.cur;
+        res = pos.cur;
 
         return res;
     }
 
-    /*template<class T>
+    template<class T>
     typename list<T>::iterator list<T>::erase(list<T>::const_iterator pos) {
-        iterator tmp;
-        return tmp;
+
+        node* to_del = pos.cur;
+
+        //  std::cout << to_del->value << " to_del\n " << std::endl;
+        //  std::cout << to_del->prev->value << " to_del-prev\n " << std::endl;
+        //  std::cout << to_del->next->value << " to_del-next\n " << std::endl;
+
+        to_del->next->prev = to_del->prev;
+        to_del->prev->next = to_del->next;
+
+        delete to_del;
+
+        this->size_l--;
+
+        iterator res;
+        pos++;
+        res = pos.cur;
+
+        return res;
+
     }
 
     template<class T>
     typename list<T>::iterator list<T>::erase(list<T>::const_iterator first, list<T>::const_iterator last) {
-        iterator tmp;
-        return tmp;
-    }*/
+        const_iterator iter = first;
+        const_iterator tmp = iter;
+
+        while (iter != last) {
+            tmp++;
+            erase(iter);
+            iter = tmp;
+        }
+
+        iterator res;
+        res = last.cur;
+
+        return res;
+    }
 
 }  // namespace task
 

@@ -4,19 +4,12 @@
 
 namespace task {
     template<class T>
-    list<T>::const_iterator::const_iterator() = default;
+    list<T>::const_iterator::const_iterator() : cur{} {}
 
     template<class T>
-    list<T>::const_iterator::const_iterator(const const_iterator& it) = default;
-
-    template<class T>
-    typename list<T>::const_iterator& list<T>::const_iterator::operator=(const const_iterator& it) {
+    list<T>::const_iterator::const_iterator(const list<T>::const_iterator& it) {
         cur = it.cur;
-        return *this;
     }
-
-    template<class T>
-    list<T>::const_iterator::const_iterator(const iterator &it): cur(it.cur) {}
 
     template<class T>
     typename list<T>::node* list<T>::const_iterator::getPtr() {
@@ -29,6 +22,11 @@ namespace task {
         return *this;
     }
 
+    template<class T>
+    typename list<T>::const_iterator& list<T>::const_iterator::operator=(const list<T>::const_iterator& it) {
+        cur = it.cur;
+        return *this;
+    }
 
     template<class T>
     typename list<T>::const_iterator& list<T>::const_iterator::operator++() {  //  справа
@@ -78,6 +76,11 @@ namespace task {
     template<class T>
     bool list<T>::const_iterator::operator!=(list<T>::const_iterator other) const {
         return !(this->cur == other.cur);
+    }
+
+    template<class T>
+    list<T>::const_iterator::const_iterator(const iterator &it) {
+        cur = it.cur;
     }
 
 }  // namespace task

@@ -18,14 +18,14 @@ namespace task {
         last->prev->next = to_add;
         last->prev = to_add;
 
-        size_l++;
+        this->size_l++;
 
         //  std::cout << last->prev->value << " PUSH_BACK\n " << std::endl;
     }
 
     template<class T>
     void list<T>::pop_back() {
-        if (size_l == 0) {
+        if (this->size_l == 0) {
             return;
         }
 
@@ -36,7 +36,7 @@ namespace task {
 
         delete to_del;
 
-        size_l--;
+        this->size_l--;
 
         //std::cout << last->prev->value << " POP_BACK\n " << std::endl;
     }
@@ -53,14 +53,14 @@ namespace task {
         first->next->prev = to_add;
         first->next = to_add;
 
-        size_l++;
+        this->size_l++;
 
         //std::cout << first->next->value << " PUSH_FRONT\n " << std::endl;
     }
 
     template<class T>
     void list<T>::pop_front() {
-        if (size_l == 0) {
+        if (this->size_l == 0) {
             return;
         }
 
@@ -71,14 +71,21 @@ namespace task {
 
         delete to_del;
 
-        size_l--;
+        this->size_l--;
 
         //std::cout << first->next->value << " POP_FRONT\n " << std::endl;
     }
 
     template<class T>
     void list<T>::swap(list& other) {
-
+        node* l_first_tmp;
+        node* l_last_tmp;
+        l_first_tmp = first;
+        l_last_tmp = last;
+        first = other.first;
+        last = other.last;
+        other.first = l_first_tmp;
+        other.last = l_last_tmp;
     }
 
 }  // namespace task

@@ -1,5 +1,7 @@
 #pragma once // NOLINT
 
+#include <iterator>
+
 #include <include/list.hpp>
 
 namespace task {
@@ -19,32 +21,36 @@ namespace task {
 
     template<class T>
     typename list<T>::const_iterator list<T>::cbegin() const {
-        return nullptr;
+        const_iterator res;
+        res = first->next;
+        return res;
     }
 
     template<class T>
     typename list<T>::const_iterator list<T>::cend() const {
-        return nullptr;
+        const_iterator res;
+        res = last;
+        return res;
     }
 
     template<class T>
     typename list<T>::reverse_iterator list<T>::rbegin() const {
-        return nullptr;
+        return reverse_iterator(end());
     }
 
     template<class T>
     typename list<T>::reverse_iterator list<T>::rend() const {
-        return nullptr;
+        return reverse_iterator(begin());
     }
 
     template<class T>
     typename list<T>::const_reverse_iterator list<T>::crbegin() const {
-        return nullptr;
+        return const_reverse_iterator(cend());
     }
 
     template<class T>
     typename list<T>::const_reverse_iterator list<T>::crend() const {
-        return nullptr;
+        return const_reverse_iterator(cbegin());
     }
 
 }  // namespace task
