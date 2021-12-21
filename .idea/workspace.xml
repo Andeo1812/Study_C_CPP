@@ -21,13 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e446366f-beac-4501-a4d7-68906d77d20c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/list.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/include/list.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/const_iterator_impl.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/const_iterator_impl.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_iterators.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_iterators.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_modiflers.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_modiflers.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_modiflers_pop_push.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_modiflers_pop_push.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/list_operations.hpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/list_operations.hpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +59,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/include" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -110,11 +103,6 @@
     <configuration name="test" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="TechPark-2021" TARGET_NAME="test" CONFIG_NAME="test" version="1">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <list>
@@ -168,7 +156,7 @@
       <workItem from="1638989828678" duration="10225000" />
       <workItem from="1639062903867" duration="20589000" />
       <workItem from="1639140615415" duration="24291000" />
-      <workItem from="1639212629129" duration="9895000" />
+      <workItem from="1639212629129" duration="10667000" />
     </task>
     <servers />
   </component>
